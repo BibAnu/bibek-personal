@@ -1,0 +1,22 @@
+<div class="jumbotron top-space">
+	<div class="container">
+		<h3 class="text-center thin">OUR VIDEOS</h3>
+		<div class="row recent-work">
+			{{#if data.videos.length}} {{# each data.videos}}
+			<div class="col-md-3 col-sm-6 highlight">
+				<div class="h-caption">
+					<h4>{{title}}</h4>
+				</div>
+				<a href="{{link}}" target="_blank">
+					<img src="{{cloudinaryUrl image width=300 height=195}}" alt="" id="home-proj" />
+				</a>
+				<div class="h-body text-center">
+					{{{description}}}
+				</div>
+			</div>
+			{{/each}} {{else}}
+			<h3 class="text-muted">There are no videos yet.</h3>
+			{{/if}}
+		</div>
+	</div>
+</div>

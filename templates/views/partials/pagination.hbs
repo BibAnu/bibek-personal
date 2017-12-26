@@ -1,0 +1,13 @@
+<ul class="pagination">
+	<li {{#unless data.videos.previous}}class="disabled"{{/unless}}>
+		<a href="{{paginationPreviousUrl data.videos.previous}}">
+			<span class="glyphicon glyphicon-chevron-left"></span>
+		</a>
+	</li>
+	{{{paginationNavigation data.videos.pages data.videos.currentPage data.videos.totalPages}}}
+	<li {{#unless data.videos.next}}class="disabled"{{/unless}}>
+		<a href="{{paginationNextUrl data.videos.next data.videos.totalPages}}">
+			<span class="glyphicon glyphicon-chevron-right"></span>
+		</a>
+	</li>
+</ul>

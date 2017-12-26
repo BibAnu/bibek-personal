@@ -1,0 +1,38 @@
+<div class="container" style="margin-top: 6em;">
+	{{#if galleries}} 
+		{{#each galleries}}
+			<h3>{{name}}</h3>
+			<div class="row gallery-images">
+			{{#if heroImage.url}}
+				<div class="col-sm-3 col-md-3 gallery-image">
+					<a class="gallery-image gallery-fancy-box" href="{{cloudinaryUrl heroImage width=900 height=600 crop='limit'}}" rel='{{key}}'>
+						<img class="img-rounded" src="{{cloudinaryUrl heroImage width=680 height=680 crop='limit'}}">
+					</a>
+				</div>
+				<div class="col-sm-8 col-md-8">
+					<div class="row">
+						{{#each images}}
+						<div class="col-xs-4 col-sm-4 col-md-3 gallery-image">
+							<a class="gallery-image gallery-fancy-box" href="{{cloudinaryUrl width=900 height=600 crop='limit'}}" rel='{{key}}'>
+								<img class="img-rounded" src="{{cloudinaryUrl width=680 height=680 gravity='auto' crop='fill'}}">
+							</a>
+						</div>
+						{{/each}}
+					</div>
+				</div>
+			{{else}} 
+				{{#each images}}
+				<div class="col-xs-4 col-sm-3 col-md-2 gallery-image">
+					<a class="gallery-image gallery-fancy-box" href="{{cloudinaryUrl width=900 height=600 crop='limit'}}" rel='{{key}}'>
+						<img class="img-rounded" src="{{cloudinaryUrl width=680 height=680 gravity='auto' crop='fill'}}">
+					</a>
+				</div>
+				{{/each}} 
+			{{/if}} 
+			</div>
+		{{/each}} 
+	{{else}}
+		<h3 class="text-muted">There are no image galleries yet.</h3>
+	{{/if}}
+</div>
+

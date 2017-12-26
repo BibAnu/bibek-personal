@@ -1,0 +1,50 @@
+{{!
+< default}} <!-- Intro -->
+	<div class="container text-center">
+		<br>
+		<br>
+		<h2 class="thin">Musical Jar</h2>
+		<p class="text-muted">
+			Musical Jar is a Platform for many talented artists, performers and singers in Australia and provides opportunity to put
+			a show for an audience.
+			<br> Starting form January 2018 we are aiming to bring an episode on a Fortnightly basic on YouTube. Every one is welcomed
+			to this platform.
+		</p>
+	</div>
+	<!-- /Intro-->
+
+	<!-- Highlights - jumbotron -->
+	{{#if videos.length}}
+	<div class="jumbotron top-space">
+		<div class="container">
+			<h3 class="text-center thin">Recent Videos</h3>
+			<div class="row recent-work">
+				{{# each videos}}
+				<div class="col-md-4 col-sm-6 highlight">
+					<div class="h-caption">
+						<h4>{{title}}</h4>
+					</div>
+					<a href="{{link}}" target="_blank">
+						<img src="{{cloudinaryUrl image width=300 height=195 gravity="auto" crop='fill'}}" alt="" id="home-proj" />
+					</a>
+					<div class="h-body text-center">
+						{{{description}}}
+					</div>
+				</div>
+				{{/each}}
+			</div>
+		</div>
+	</div>
+	{{/if}}
+
+{{!-- 
+	<div class="jumbotron top-space">
+		<h4>Dicta, nostrum nemo soluta sapiente sit dolor quae voluptas quidem doloribus recusandae facere magni ullam suscipit sunt
+			atque rerum eaque iusto facilis esse nam veniam incidunt officia perspiciatis at voluptatibus. Libero, aliquid illum possimus
+			numquam fuga.</h4>
+		<p class="text-right">
+			<a class="btn btn-primary btn-large">Contact Us »</a>
+		</p>
+	</div>
+
+	</div> --}}
