@@ -17,4 +17,5 @@ Gallery.add({
 	images: { type: Types.CloudinaryImages },
 });
 
+Gallery.defaultColumns = 'name, publishedDate';
 Gallery.register();
