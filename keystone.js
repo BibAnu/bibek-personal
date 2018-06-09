@@ -13,14 +13,15 @@ var keystone = require('keystone'),
 
 
 keystone.init({
-	'name': 'Musical Jar',
-	'brand': 'Musical Jar',
+	'name': 'Plus977 Production',
+	'brand': 'Plus977 Production',
 
 	'less': 'public',
 	'static': 'public',
 	'favicon': 'public/favicon.ico',
 	'views': 'templates/views',
 	'view engine': 'hbs',
+	'emails': 'templates/emails',
 
 	'custom engine': handlebars.create({
 		layoutsDir: 'templates/views/layouts',
@@ -68,5 +69,14 @@ keystone.set('nav', {
 });
 
 // Start Keystone to connect to your database and initialise the web server
+// if (!process.env.MAILGUN_API_KEY || !process.env.MAILGUN_DOMAIN) {
+// 	console.log('----------------------------------------'
+// 	+ '\nWARNING: MISSING MAILGUN CREDENTIALS'
+// 	+ '\n----------------------------------------'
+// 	+ '\nYou have opted into email sending but have not provided'
+// 	+ '\nmailgun credentials. Attempts to send will fail.'
+// 	+ '\n\nCreate a mailgun account and add the credentials to the .env file to'
+// 	+ '\nset up your mailgun integration');
+// }
 
 keystone.start();

@@ -39,8 +39,12 @@
 
 .navbar-inverse .navbar-nav > .active > a { background:none; color:white; }
 
-.navbar-inverse .navbar-brand { font-family: "Open sans", helvetica, arial; font-size: 24px; color:white; padding:0 0 0 15px; margin:12px 0 0 0; }
-	.navbar-inverse .navbar-brand img { margin-top: -23px; max-height: 70px;}
+.navbar-inverse .navbar-brand { font-family: "Open sans", helvetica, arial; font-size: 24px; color:white; padding:0 0 0 15px; margin: -12px 0 0 0; }
+	.navbar-inverse .navbar-brand img { max-height: 70px;}
+
+@media (max-width: 500px) {
+	.logo-name {  display: none }
+} 	
 
 .navbar-nav .dropdown-menu {
 	left:-5px;
@@ -117,7 +121,7 @@
 
 
 /* Header */
-#head { background:#181015 url( /images/home.jpg) no-repeat; background-size: cover; min-height:850px; text-align: center; padding-top:240px; color:white; font-family:"Open sans", Helvetica, Arial; font-weight:300; }
+#head { background:#181015 url( /images/home.jpg) no-repeat; background-size: cover; min-height:750px; text-align: center; padding-top:240px; color:white; font-family:"Open sans", Helvetica, Arial; font-weight:300; }
 #head.secondary { height:100px; min-height: 100px; padding-top:0px; }
 	#head .lead { font-family:"Open sans", Helvetica, Arial; font-size:44px; margin-bottom:6px; color:white; line-height:1.15em; text-shadow: 1px 1px #5e5b5b; } 
 	#head .tagline { color: red; font-weight: bolder; margin-bottom:25px; text-shadow: 1px 1px #000; font-size: 17px; }

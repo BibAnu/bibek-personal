@@ -1,0 +1,19 @@
+<html>
+
+<head></head>
+
+<body>
+    <h1>Hi {{recipient.firstName}},</h1>
+    <p class="text-larger">An enquiry was just submitted to {{brand}}.</p>
+    <p>From: {{#if enquiry.name.full}}{{enquiry.name.full}} {{/if}} {{#if enquiry.email}}
+        <a href="mailto:{{enquiry.email}}">{{enquiry.email}}</a> {{/if}}
+    </p>
+    {{#if enquiry.phone}}
+    <p>Phone: {{enquiry.phone}}</p>
+    {{/if}} {{#if enquiry.message}}
+    <p>{{enquiry.message}}</p>
+    {{/if}}
+    <p>&nbsp;</p>
+</body>
+
+</html>
