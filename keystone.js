@@ -10,13 +10,11 @@ var keystone = require('keystone'),
 // Initialise Keystone with your project's configuration.
 // See http://keystonejs.com/guide/config for available options
 // and documentation.
-if (process.env.OPENSHIFT_NODEJS_IP) {
-	keystone.set('host', process.env.OPENSHIFT_NODEJS_IP);
-}
-if (process.env.OPENSHIFT_NODEJS_PORT) {
-	keystone.set('port', process.env.OPENSHIFT_NODEJS_PORT);
-}
+var server_port = process.env.OPENSHIFT_NODEJS_PORT || 8080;
+var server_ip_address = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1';
 
+keystone.set('host', server_ip_address);
+keystone.set('port', server_port);
 
 keystone.init({
 	'name': 'Plus977 Production',
