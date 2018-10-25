@@ -13,6 +13,8 @@ var keystone = require('keystone'),
 var server_port = process.env.OPENSHIFT_NODEJS_PORT || 8080;
 var server_ip_address = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1';
 
+console.log(process.env.OPENSHIFT_NODEJS_IP, process.env.OPENSHIFT_NODEJS_PORT);
+
 keystone.set('host', server_ip_address);
 keystone.set('port', server_port);
 
@@ -55,6 +57,8 @@ keystone.set('locals', {
 	utils: keystone.utils,
 	editable: keystone.content.editable
 });
+
+console.log('back', process.env.OPENSHIFT_NODEJS_IP, process.env.OPENSHIFT_NODEJS_PORT);
 
 // Load your project's Routes
 
